@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Solo Leveling — Genre Analysis · ENG 1010 Project Three</title>
+  <link rel="stylesheet" href="deck.css">
+  <script src="deck_stage.js"></script>
+  <style>
+    /* ===== 01 TITLE ===== */
+    .t-art img {
+      object-position: 50% 40%;
+      filter: grayscale(.55) contrast(1.2) brightness(.62)
+    }
+
+    .t-grade {
+      background:
+        linear-gradient(90deg, rgba(6, 7, 10, .96) 0%, rgba(6, 7, 10, .75) 38%, rgba(6, 7, 10, .1) 70%),
+        linear-gradient(0deg, rgba(6, 7, 10, 1) 0%, transparent 45%),
+        radial-gradient(ellipse at 62% 45%, rgba(209, 26, 42, .38), transparent 55%)
+    }
+
+    .t-red {
+      position: absolute;
+      inset: 0;
+      background: var(--red-deep);
+      mix-blend-mode: color;
+      opacity: .55
+    }
+
+    .t-wrap {
+      position: absolute;
+      left: 120px;
+      bottom: 170px;
+      width: 1150px;
+      z-index: 3
+    }
+
+    .t-series {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: 250px;
+      line-height: .8;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, #fff 30%, #9aa1ab);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 6px 30px rgba(0, 0, 0, .6))
+    }
+
+    .t-bar {
+      width: 140px;
+      height: 4px;
+      background: var(--red);
+      margin: 44px 0 36px;
+      box-shadow: 0 0 24px var(--red)
+    }
+
+    .t-sub {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 68px;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      color: var(--paper)
+    }
+
+    .t-sub span {
+      color: #ff4a57
+    }
+
+    .t-meta {
+      margin-top: 40px;
+      font-family: var(--mono);
+      font-size: 24px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--steel)
+    }
+
+    .t-meta i {
+      font-style: normal;
+      color: var(--red);
+      margin: 0 18px
+    }
+
+    .t-sys {
+      position: absolute;
+      top: 84px;
+      right: 96px;
+      z-index: 3;
+      font-family: var(--mono);
+      font-size: 20px;
+      letter-spacing: .2em;
+      color: var(--sys);
+      text-align: right;
+      text-shadow: 0 0 14px var(--sys-dim);
+      line-height: 1.8
+    }
+
+    /* ===== 02 Q1 — BERU ===== */
+    .q1-art {
+      left: auto;
+      width: 58%
+    }
+
+    .q1-art img {
+      object-position: 62% 30%;
+      filter: saturate(.75) contrast(1.15) brightness(.78) hue-rotate(-8deg)
+    }
+
+    .q1-grade {
+      background: linear-gradient(90deg, var(--ink) 40%, rgba(6, 7, 10, .6) 58%, rgba(6, 7, 10, 0) 80%), linear-gradient(0deg, rgba(6, 7, 10, .9), transparent 35%)
+    }
+
+    .q1-body {
+      position: absolute;
+      left: 120px;
+      top: 110px;
+      width: 960px;
+      z-index: 3
+    }
+
+    .q1-def {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin: 52px 0 46px;
+      border-top: 1px solid rgba(255, 255, 255, .18);
+      border-bottom: 1px solid rgba(255, 255, 255, .18)
+    }
+
+    .q1-def div {
+      padding: 26px 0
+    }
+
+    .q1-def div+div {
+      padding-left: 36px;
+      border-left: 1px solid rgba(255, 255, 255, .18)
+    }
+
+    .q1-def b {
+      display: block;
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 58px;
+      text-transform: uppercase;
+      line-height: 1;
+      letter-spacing: .02em
+    }
+
+    .q1-def b.r {
+      color: #ff4a57
+    }
+
+    .q1-def span {
+      display: block;
+      margin-top: 10px;
+      font-family: var(--mono);
+      font-size: 20px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--steel)
+    }
+
+    .q1-ctx {
+      font-size: 29px;
+      line-height: 1.45;
+      color: #c9ced6
+    }
+
+    .q1-ctx strong {
+      color: var(--paper);
+      font-weight: 500
+    }
+
+    .q1-key {
+      position: absolute;
+      right: 96px;
+      bottom: 140px;
+      width: 640px;
+      z-index: 3
+    }
+
+    .q1-key h3 {
+      font-size: 44px;
+      margin-bottom: 18px
+    }
+
+    .q1-key .row {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 20px;
+      font-size: 25px;
+      line-height: 1.38;
+      color: #c9ced6;
+      padding: 12px 0;
+      border-top: 1px solid rgba(95, 214, 255, .18)
+    }
+
+    .q1-key .row span {
+      font-family: var(--mono);
+      font-size: 18px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--sys);
+      padding-top: 5px
+    }
+
+    /* ===== 03 Q2 — IGRIS ===== */
+    .q2-art img {
+      object-position: 38% 30%;
+      filter: contrast(1.15) brightness(.7) saturate(.9)
+    }
+
+    .q2-grade {
+      background: linear-gradient(90deg, rgba(6, 7, 10, .2) 0%, rgba(6, 7, 10, .55) 36%, rgba(6, 7, 10, .96) 55%), linear-gradient(0deg, rgba(6, 7, 10, .85), transparent 30%)
+    }
+
+    .q2-body {
+      position: absolute;
+      left: 900px;
+      right: 96px;
+      top: 100px;
+      z-index: 3
+    }
+
+    .q2-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 44px;
+      margin-top: 44px
+    }
+
+    .q2-c {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, .14);
+      align-items: baseline
+    }
+
+    .q2-c i {
+      font-style: normal;
+      font-family: var(--mono);
+      font-size: 20px;
+      color: #ff4a57;
+      letter-spacing: .1em
+    }
+
+    .q2-c b {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 38px;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      line-height: 1
+    }
+
+    .q2-c small {
+      display: block;
+      grid-column: 2;
+      font-size: 22px;
+      color: var(--steel);
+      margin-top: 6px;
+      line-height: 1.3
+    }
+
+    .q2-fight {
+      margin-top: 44px
+    }
+
+    .q2-fight .cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 6px
+    }
+
+    .q2-fight .cols div b {
+      display: block;
+      font-family: var(--display);
+      font-size: 34px;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: var(--paper);
+      margin-bottom: 8px;
+      letter-spacing: .03em
+    }
+
+    .q2-fight .cols div p {
+      font-size: 23px;
+      line-height: 1.38;
+      color: #c3c9d2
+    }
+
+    /* ===== 04 Q3 — CHA HAE-IN ===== */
+    .q3-art {
+      left: auto;
+      width: 50%
+    }
+
+    .q3-art img {
+      object-position: 58% 25%;
+      filter: saturate(.85) contrast(1.08) brightness(.85)
+    }
+
+    .q3-grade {
+      background: linear-gradient(90deg, var(--ink) 0%, rgba(6, 7, 10, .35) 30%, rgba(6, 7, 10, 0) 60%), linear-gradient(0deg, rgba(6, 7, 10, .9), transparent 35%), linear-gradient(180deg, rgba(6, 7, 10, .6), transparent 25%)
+    }
+
+    .q3-glow {
+      position: absolute;
+      right: 10%;
+      top: 20%;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(95, 214, 255, .18), transparent 65%);
+      mix-blend-mode: screen
+    }
+
+    .q3-body {
+      position: absolute;
+      left: 120px;
+      top: 110px;
+      width: 900px;
+      z-index: 3
+    }
+
+    .q3-words {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      justify-content: start;
+      gap: 0;
+      margin: 48px 0 40px
+    }
+
+    .q3-words div {
+      padding: 0 34px;
+      border-left: 1px solid rgba(95, 214, 255, .3)
+    }
+
+    .q3-words div:first-child {
+      padding-left: 0;
+      border-left: 0
+    }
+
+    .q3-words b {
+      display: block;
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: 76px;
+      line-height: .9;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: 0 0 30px rgba(95, 214, 255, .35)
+    }
+
+    .q3-words span {
+      display: block;
+      margin-top: 10px;
+      font-family: var(--mono);
+      font-size: 17px;
+      letter-spacing: .14em;
+      color: var(--sys);
+      text-transform: uppercase
+    }
+
+    .q3-tools {
+      display: flex;
+      gap: 12px;
+      margin: 26px 0 0
+    }
+
+    .q3-tools span {
+      font-family: var(--mono);
+      font-size: 19px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      padding: 10px 16px;
+      border: 1px solid rgba(95, 214, 255, .35);
+      color: var(--sys)
+    }
+
+    /* ===== 05 Q4 — ANT KING ===== */
+    .q4-art img {
+      object-position: 50% 20%;
+      filter: grayscale(.35) contrast(1.25) brightness(.55)
+    }
+
+    .q4-red {
+      position: absolute;
+      inset: 0;
+      background: var(--red-deep);
+      mix-blend-mode: color;
+      opacity: .6
+    }
+
+    .q4-grade {
+      background: linear-gradient(0deg, rgba(6, 7, 10, 1) 18%, rgba(6, 7, 10, .55) 52%, rgba(6, 7, 10, .2) 100%), radial-gradient(ellipse at 50% 18%, transparent 30%, rgba(0, 0, 0, .6) 80%)
+    }
+
+    .q4-head {
+      position: absolute;
+      left: 120px;
+      top: 100px;
+      width: 1100px;
+      z-index: 3
+    }
+
+    .q4-grid {
+      position: absolute;
+      left: 120px;
+      right: 120px;
+      bottom: 220px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      z-index: 3
+    }
+
+    .q4-grid .sys {
+      padding: 28px 28px 30px
+    }
+
+    .q4-grid h3 {
+      font-size: 40px;
+      margin-bottom: 14px;
+      line-height: .95
+    }
+
+    .q4-grid p {
+      font-size: 23px;
+      line-height: 1.4;
+      color: #d0c6c8
+    }
+
+    .q4-quote {
+      position: absolute;
+      left: 120px;
+      right: 120px;
+      bottom: 112px;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 40px;
+      color: #f0e4e5
+    }
+
+    .q4-quote::before {
+      content: '';
+      width: 70px;
+      height: 2px;
+      background: var(--red);
+      box-shadow: 0 0 14px var(--red);
+      flex: none
+    }
+
+    /* ===== 06 CLOSE ANALYSIS — JINWOO ===== */
+    .ca-art img {
+      object-position: 30% 50%;
+      filter: contrast(1.12) brightness(.8) saturate(.9)
+    }
+
+    .ca-grade {
+      background: linear-gradient(90deg, rgba(6, 7, 10, 0) 30%, rgba(6, 7, 10, .75) 52%, rgba(6, 7, 10, .97) 64%), linear-gradient(0deg, rgba(6, 7, 10, .7), transparent 30%)
+    }
+
+    .ca-body {
+      position: absolute;
+      left: 1080px;
+      right: 96px;
+      top: 96px;
+      z-index: 3
+    }
+
+    .ca-list {
+      margin-top: 34px
+    }
+
+    .ca-item {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 0;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, .14)
+    }
+
+    .ca-item .ts {
+      font-family: var(--mono);
+      font-size: 18px;
+      color: var(--sys);
+      letter-spacing: .12em;
+      padding-top: 8px
+    }
+
+    .ca-item b {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 38px;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      display: block;
+      line-height: 1
+    }
+
+    .ca-item p {
+      font-size: 23px;
+      line-height: 1.38;
+      color: #c3c9d2;
+      margin-top: 8px
+    }
+
+    .ca-contrast {
+      position: absolute;
+      left: 96px;
+      bottom: 130px;
+      z-index: 3;
+      display: flex;
+      align-items: stretch;
+      gap: 0
+    }
+
+    .ca-contrast div {
+      padding: 16px 26px;
+      font-family: var(--mono);
+      font-size: 19px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      background: rgba(6, 7, 10, .6);
+      backdrop-filter: blur(4px)
+    }
+
+    .ca-contrast div b {
+      display: block;
+      font-family: var(--display);
+      font-size: 40px;
+      letter-spacing: .02em;
+      margin-top: 4px
+    }
+
+    .ca-contrast .a {
+      border: 1px solid rgba(95, 214, 255, .4);
+      color: var(--sys)
+    }
+
+    .ca-contrast .a b {
+      color: #fff
+    }
+
+    .ca-contrast .vs {
+      display: flex;
+      align-items: center;
+      padding: 0 18px;
+      background: none;
+      backdrop-filter: none;
+      color: var(--steel);
+      font-family: var(--display);
+      font-size: 34px;
+      letter-spacing: 0
+    }
+
+    .ca-contrast .b {
+      border: 1px solid rgba(209, 26, 42, .55);
+      color: #ff6b76
+    }
+
+    .ca-contrast .b b {
+      color: #fff
+    }
+
+    .ca-clip {
+      margin-top: 26px;
+      font-family: var(--mono);
+      font-size: 18px;
+      letter-spacing: .06em;
+      color: var(--steel)
+    }
+
+    .ca-clip a {
+      color: var(--sys);
+      text-decoration: none;
+      border-bottom: 1px solid var(--sys-dim)
+    }
+
+    /* ===== 07 SUPPORTING CAST — IRON ===== */
+    .sc-art {
+      width: 42%
+    }
+
+    .sc-art img {
+      object-position: 50% 18%;
+      filter: contrast(1.1) brightness(.82) saturate(.9)
+    }
+
+    .sc-grade {
+      background: linear-gradient(90deg, transparent 18%, rgba(6, 7, 10, .7) 32%, var(--ink) 44%), linear-gradient(0deg, rgba(6, 7, 10, .9), transparent 30%)
+    }
+
+    .sc-body {
+      position: absolute;
+      left: 860px;
+      right: 110px;
+      top: 110px;
+      z-index: 3
+    }
+
+    .sc-tiers {
+      margin-top: 46px;
+      display: grid;
+      gap: 22px
+    }
+
+    .sc-tier {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 30px;
+      align-items: start
+    }
+
+    .sc-tier .rk {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: 96px;
+      line-height: .8;
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(95, 214, 255, .7);
+      text-align: center
+    }
+
+    .sc-tier.red .rk {
+      -webkit-text-stroke-color: rgba(255, 74, 87, .75)
+    }
+
+    .sc-tier.gray .rk {
+      -webkit-text-stroke-color: rgba(200, 205, 212, .6)
+    }
+
+    .sc-tier b {
+      display: block;
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 40px;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      line-height: 1
+    }
+
+    .sc-tier p {
+      font-size: 25px;
+      line-height: 1.4;
+      color: #c3c9d2;
+      margin-top: 8px
+    }
+
+    .sc-cap {
+      position: absolute;
+      left: 96px;
+      bottom: 130px;
+      z-index: 3;
+      font-family: var(--mono);
+      font-size: 19px;
+      letter-spacing: .2em;
+      color: var(--sys);
+      text-transform: uppercase;
+      text-shadow: 0 0 12px var(--sys-dim)
+    }
+
+    .sc-cap b {
+      display: block;
+      font-family: var(--display);
+      font-size: 64px;
+      letter-spacing: .04em;
+      color: #fff;
+      font-weight: 900;
+      margin-top: 4px;
+      text-shadow: none
+    }
+
+    /* ===== 08 REFLECTION — JINWOO ALONE ===== */
+    .rf-art img {
+      object-position: 60% 50%;
+      filter: contrast(1.15) brightness(.55) saturate(.7)
+    }
+
+    .rf-red {
+      position: absolute;
+      inset: 0;
+      background: var(--red-deep);
+      mix-blend-mode: color;
+      opacity: .35
+    }
+
+    .rf-grade {
+      background: linear-gradient(90deg, rgba(6, 7, 10, .98) 0%, rgba(6, 7, 10, .85) 38%, rgba(6, 7, 10, .15) 70%), linear-gradient(0deg, rgba(6, 7, 10, .95), transparent 40%)
+    }
+
+    .rf-body {
+      position: absolute;
+      left: 120px;
+      top: 100px;
+      width: 1020px;
+      z-index: 3
+    }
+
+    .rf-big {
+      font-family: var(--display);
+      font-weight: 900;
+      font-size: 190px;
+      line-height: .82;
+      text-transform: uppercase;
+      margin: 26px 0 30px
+    }
+
+    .rf-big span {
+      color: var(--red);
+      text-shadow: 0 0 50px rgba(209, 26, 42, .5)
+    }
+
+    .rf-points {
+      display: grid;
+      gap: 0;
+      margin-top: 34px
+    }
+
+    .rf-points div {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      padding: 18px 0;
+      border-top: 1px solid rgba(255, 255, 255, .14);
+      font-size: 27px;
+      line-height: 1.4;
+      color: #cdd2d9
+    }
+
+    .rf-points div i {
+      font-style: normal;
+      font-family: var(--mono);
+      font-size: 19px;
+      color: #ff4a57;
+      padding-top: 6px;
+      letter-spacing: .1em
+    }
+
+    .rf-points strong {
+      color: #fff;
+      font-weight: 500
+    }
+
+    .rf-out {
+      position: absolute;
+      right: 96px;
+      bottom: 130px;
+      width: 620px;
+      z-index: 3
+    }
+
+    .rf-out p {
+      font-size: 25px;
+      line-height: 1.42;
+      color: #d6dbe2
+    }
+
+    .rf-out .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px
+    }
+
+    .rf-out .chips span {
+      font-family: var(--mono);
+      font-size: 18px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      border: 1px solid rgba(95, 214, 255, .4);
+      color: var(--sys)
+    }
+
+    /* ===== 09 ARTIFACT ===== */
+    .af-bg img {
+      filter: blur(40px) brightness(.35) saturate(1.2);
+      transform: scale(1.2)
+    }
+
+    .af-frame {
+      position: absolute;
+      left: 50%;
+      top: 96px;
+      transform: translateX(-50%);
+      width: 1380px;
+      height: 776px;
+      z-index: 3;
+      box-shadow: 0 40px 120px rgba(0, 0, 0, .8), 0 0 0 1px rgba(255, 255, 255, .12), 0 0 80px rgba(209, 26, 42, .25)
+    }
+
+    .af-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .af-frame .corner {
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      border: 2px solid var(--sys);
+      filter: drop-shadow(0 0 8px var(--sys))
+    }
+
+    .af-frame .c1 {
+      top: -14px;
+      left: -14px;
+      border-right: 0;
+      border-bottom: 0
+    }
+
+    .af-frame .c2 {
+      top: -14px;
+      right: -14px;
+      border-left: 0;
+      border-bottom: 0
+    }
+
+    .af-frame .c3 {
+      bottom: -14px;
+      left: -14px;
+      border-right: 0;
+      border-top: 0
+    }
+
+    .af-frame .c4 {
+      bottom: -14px;
+      right: -14px;
+      border-left: 0;
+      border-top: 0
+    }
+
+    .af-frame .rec {
+      position: absolute;
+      top: 22px;
+      left: 26px;
+      font-family: var(--mono);
+      font-size: 18px;
+      letter-spacing: .2em;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-shadow: 0 1px 6px #000
+    }
+
+    .af-frame .rec::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 0 10px var(--red)
+    }
+
+    .af-cap {
+      position: absolute;
+      left: 270px;
+      right: 270px;
+      top: 908px;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 36px;
+      align-items: start
+    }
+
+    .af-cap .fig {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 44px;
+      text-transform: uppercase;
+      line-height: 1;
+      color: #fff
+    }
+
+    .af-cap .fig span {
+      display: block;
+      font-family: var(--mono);
+      font-size: 16px;
+      letter-spacing: .2em;
+      color: var(--sys);
+      margin-top: 6px;
+      font-weight: 400
+    }
+
+    .af-cap p {
+      font-size: 24px;
+      line-height: 1.42;
+      color: #cdd2d9
+    }
+
+    .af-cap p em {
+      font-style: italic;
+      color: #fff
+    }
+
+    .af-cap p small {
+      display: block;
+      margin-top: 6px;
+      font-family: var(--mono);
+      font-size: 17px;
+      letter-spacing: .04em;
+      color: var(--steel)
+    }
+
+    /* ===== 10 SOURCES ===== */
+    .sr-art {
+      left: auto;
+      width: 46%
+    }
+
+    .sr-art img {
+      object-position: 50% 20%;
+      filter: grayscale(.5) brightness(.45) contrast(1.1);
+      opacity: .32
+    }
+
+    .sr-grade {
+      background: linear-gradient(90deg, var(--ink) 0%, rgba(6, 7, 10, .5) 40%, rgba(6, 7, 10, .2) 100%), linear-gradient(0deg, var(--ink), transparent 40%)
+    }
+
+    .sr-body {
+      position: absolute;
+      left: 120px;
+      top: 110px;
+      width: 1260px;
+      z-index: 3
+    }
+
+    .sr-list {
+      margin-top: 50px;
+      display: grid;
+      gap: 0
+    }
+
+    .sr-list div {
+      padding: 22px 0 22px 64px;
+      text-indent: -64px;
+      border-top: 1px solid rgba(255, 255, 255, .12);
+      font-size: 26px;
+      line-height: 1.45;
+      color: #d4d8de
+    }
+
+    .sr-list div em {
+      font-style: italic;
+      color: #fff
+    }
+
+    .sr-list div span {
+      font-family: var(--mono);
+      font-size: 19px;
+      color: var(--steel);
+      letter-spacing: .02em;
+      word-break: break-all
+    }
+
+    .sr-note {
+      margin-top: 30px;
+      font-size: 21px;
+      line-height: 1.5;
+      color: var(--steel);
+      max-width: 1180px
+    }
+  </style>
+</head>
+
+<body>
+  
+
+  <deck-stage no-rail>
+
+    <!-- ============ 01 TITLE — SUNG JINWOO ============ -->
+    <section class="s" data-screen-label="01 Title">
+      <div class="art kb t-art"><img src="img/jinwoo-shadows.jpg" alt="Sung Jinwoo with his shadow army"></div>
+      <div class="t-red"></div>
+      <div class="grade t-grade"></div>
+      <div class="embers" data-embers="red" data-n="38"></div>
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div class="t-sys fade" style="--d:1.6s">[ SYSTEM ]<br>GENRE ANALYSIS — INITIATED<br>ARTIFACT: EP. 24</div>
+
+      <div class="t-wrap">
+        <div class="kicker red rise" style="--d:.1s">ENG 1010 · Project Three</div>
+        <div class="t-series rise" style="--d:.3s; margin-top:30px">Solo<br>Leveling</div>
+        <div class="t-bar wipe" style="--d:.9s"></div>
+        <div class="t-sub rise" style="--d:1.05s">Genre Analysis — <span>Why Action Fantasy</span><br>Keeps Us Watching
+        </div>
+        <div class="t-meta rise" style="--d:1.3s">ENG 1010<i>|</i>Project Three<i>|</i>Multimodal Presentation|</i>By
+          Collins Mbati|</i>To Prof: Tyler Nguyen</div>
+      </div>
+    </section>
+
+    <!-- ============ 02 Q1 — BERU ============ -->
+    <section class="s" data-screen-label="02 Q1 Genre Purpose Context">
+      <div class="art slideR q1-art"><img src="img/beru-b.jpg" alt="Beru, shadow form of the Ant King"></div>
+      <div class="grade q1-grade"></div>
+      <div class="embers" data-embers="blue" data-n="20"></div>
+      <div class="vignette"></div>
+      <div class="grain"></div>
+      <div class="qnum" style="left:60px; top:300px">1</div>
+
+      <div class="q1-body">
+        <div class="kicker rise">Question 01</div>
+        <h2 class="rise" style="--d:.15s; margin-top:26px">Genre, Purpose<br>&amp; <em>Context</em></h2>
+        <div class="q1-def rise" style="--d:.35s">
+          <div><b>Anime</b><span>The form — how it is made</span></div>
+          <div><b class="r">Action Fantasy</b><span>The genre — what story it tells</span></div>
+        </div>
+        <p class="q1-ctx rise" style="--d:.55s">Produced by <strong>A-1 Pictures</strong> and adapted from a
+          <strong>Korean web novel and webtoon</strong>, the series follows Sung Jinwoo in a world where
+          <strong>hunters</strong> fight monsters pouring from <strong>gates and dungeons</strong>. Unlike every other
+          hunter, Jinwoo grows stronger through a game-like <strong>leveling System</strong>.
+        </p>
+      </div>
+
+      <div class="q1-key sys rise" style="--d:.8s">
+        <span class="tag">Key example · Episode 24</span>
+        <h3>Jeju Island Confrontation</h3>
+        <div class="row"><span>Situation</span>Jinwoo arrives as other hunters face the Ant King.</div>
+        <div class="row"><span>Immediate</span>Protect people in danger like a rescue.</div>
+        <div class="row"><span>Narrative</span>Show's how far Jinwoo has developed.</div>
+      </div>
+
+      <div class="chrome"><span class="pg"><b>02</b> / 10</span><span class="credit">Centerpiece · Beru</span></div>
+    </section>
+
+    <!-- ============ 03 Q2 — IGRIS ============ -->
+    <section class="s" data-screen-label="03 Q2 Conventions">
+      <div class="art kb q2-art"><img src="img/igris-a.jpg" alt="Igris, the Blood-Red Commander"></div>
+      <div class="grade q2-grade"></div>
+      <div class="embers" data-embers="red" data-n="22"></div>
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div class="q2-body">
+        <div class="kicker red rise">Question 02</div>
+        <h2 class="rise" style="--d:.15s; margin-top:26px; font-size:96px">Conventions <em>&amp;</em> Their Effect</h2>
+        <div class="q2-grid">
+          <div class="q2-c rise" style="--d:.35s"><i>01</i><b>Exceptional hero</b></div>
+          <div class="q2-c rise" style="--d:.45s"><i>02</i><b>Monsters &amp; dungeons</b></div>
+          <div class="q2-c rise" style="--d:.55s"><i>03</i><b>Supernatural powers</b></div>
+          <div class="q2-c rise" style="--d:.65s"><i>04</i><b>Escalating battles</b></div>
+          <div class="q2-c rise" style="--d:.75s"><i>05</i><b>Game-like System</b><small>Quests, ranks, visible
+              progression</small></div>
+          <div class="q2-c rise" style="--d:.85s"><i>06</i><b>Impossible opponent</b><small>The enemy who seems
+              unbeatable</small></div>
+        </div>
+        <div class="q2-fight sys red rise" style="--d:1.1s">
+          <span class="tag">In the Ant King fight, they work together</span>
+          <div class="cols">
+            <div><b>Tension</b>
+              <p>The monster's design and confidence mark him as extraordinary.</p>
+            </div>
+            <div><b>Spectacle</b>
+              <p>Speed, force, music and effects make the battle urgent.</p>
+            </div>
+            <div><b>Growth</b>
+              <p>His aggression against Jinwoo's calm reveals the change.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chrome"><span class="pg"><b>03</b> / 10</span><span class="credit">Centerpiece · Igris</span></div>
+    </section>
+
+    <!-- ============ 04 Q3 — CHA HAE-IN ============ -->
+    <section class="s" data-screen-label="04 Q3 Affordances">
+      <div class="art slideR q3-art"><img src="img/chahaein-b.jpg" alt="Cha Hae-In"></div>
+      <div class="q3-glow glowpulse"></div>
+      <div class="grade q3-grade"></div>
+      <div class="embers" data-embers="blue" data-n="26"></div>
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div class="q3-body">
+        <div class="kicker rise">Question 03 · Affordances</div>
+        <h2 class="rise" style="--d:.15s; margin-top:26px">What the Genre<br><em>Makes Possible</em></h2>
+        <div class="q3-words">
+          <div class="rise" style="--d:.4s"><b>Speed</b><span>Impossible motion</span></div>
+          <div class="rise" style="--d:.5s"><b>Scale</b><span>Oversized threats</span></div>
+          <div class="rise" style="--d:.6s"><b>Energy</b><span>Visible power</span></div>
+          <div class="rise" style="--d:.7s"><b>Change</b><span>Transformation</span></div>
+        </div>
+        <p class="lede rise" style="--d:.85s">Animation can show what live-action cannot easily film. <strong>Sound,
+            color, editing and camera angle</strong> make power and danger readable in seconds, even when characters
+          say very little.</p>
+        <div class="sys rise" style="--d:1.05s; margin-top:36px">
+          <span class="tag">Genre shorthand</span>
+          <p style="font-size:26px; line-height:1.42; color:#d6dbe2">Viewers already know a boss-like enemy signals a
+            serious challenge, so the Ant King's entrance raises expectations instantly. A few images do the work of
+            paragraphs.</p>
+        </div>
+      </div>
+
+      <div class="chrome"><span class="pg"><b>04</b> / 10</span><span class="credit">Centerpiece · Cha Hae-In</span>
+      </div>
+    </section>
+
+    <!-- ============ 05 Q4 — ANT KING ============ -->
+    <section class="s" data-screen-label="05 Q4 Constraints">
+      <div class="art kb q4-art"><img src="img/beru-a.jpg" alt="The Ant King in his original winged form"></div>
+      <div class="q4-red"></div>
+      <div class="grade q4-grade"></div>
+      <div class="embers" data-embers="red" data-n="34"></div>
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div class="q4-head">
+        <div class="kicker red rise">Question 04 · Constraints</div>
+        <h2 class="rise" style="--d:.15s; margin-top:26px">What the Genre<br><em>Must Preserve</em></h2>
+      </div>
+
+      <div class="q4-grid">
+        <div class="sys red rise" style="--d:.4s"><span class="tag">Rule 01</span>
+          <h3>Consistent power</h3>
+          <p>Viewers must understand what Jinwoo can do and why he grows. Unearned abilities kill suspense.</p>
+        </div>
+        <div class="sys red rise" style="--d:.55s"><span class="tag">Rule 02</span>
+          <h3>Readable action</h3>
+          <p>Extreme speed still has to be followed with details on who strikes, who is hurt, and who is winning.</p>
+        </div>
+        <div class="sys red rise" style="--d:.7s"><span class="tag">Rule 03</span>
+          <h3>Emotional stakes</h3>
+          <p>The Jeju fight matters because other hunters' lives depend on the outcome.</p>
+        </div>
+        <div class="sys red rise" style="--d:.85s"><span class="tag">Rule 04</span>
+          <h3>Adaptation limits</h3>
+          <p>An existing story must fit an episode's running time without losing its shape.</p>
+        </div>
+      </div>
+
+      <div class="q4-quote wipe" style="--d:1.2s">Spectacle without consequence would break the genre.</div>
+      <div class="chrome"><span class="pg"><b>05</b> / 10</span><span class="credit">Centerpiece · The Ant King</span>
+      </div>
+    </section>
+
+    <!-- ============ 06 CLOSE ANALYSIS — JINWOO MID-BATTLE ============ -->
+    <section class="s" data-screen-label="06 Close Analysis">
+      <div class="art kb ca-art"><img src="img/ep24-substack.jpg" alt="Jinwoo mid-battle against the Ant King"></div>
+      <div class="grade ca-grade"></div>
+      <div class="embers" data-embers="blue" data-n="30"></div>
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div class="ca-body">
+        <div class="kicker rise">Close Reading · Episode 24</div>
+        <h2 class="rise" style="--d:.15s; margin-top:26px; font-size:92px">Inside the<br><em>Ant King</em> Fight</h2>
+        <div class="ca-list">
+          <div class="ca-item rise" style="--d:.4s"><span class="ts">01</span>
+            <div><b>Pacing</b>
+              <p>A tense exchange before the clash builds anticipation, then the fight erupts.</p>
+            </div>
+          </div>
+          <div class="ca-item rise" style="--d:.55s"><span class="ts">02</span>
+            <div><b>Contrast</b>
+              <p>Jinwoo's stillness against the Ant King's fury shows who has grown thus no dialogue needed.</p>
+            </div>
+          </div>
+          <div class="ca-item rise" style="--d:.7s"><span class="ts">03</span>
+            <div><b>Sound</b>
+              <p>Score and impact effects raise urgency and mark each turning point.</p>
+            </div>
+          </div>
+          <div class="ca-item rise" style="--d:.85s"><span class="ts">04</span>
+            <div><b>Movement</b>
+              <p>Rapid strikes and shadow energy make abstract power visible.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ca-clip rise" style="--d:1s">▶ Evidence clip: <a href="https://www.youtube.com/watch?v=IrHTT2IEKpE"
+            target="_blank">Crunchyroll — "Sung Jinwoo vs. the Ant King"</a></div>
+      </div>
+
+      <div class="ca-contrast fade" style="--d:1.3s">
+        <div class="a">Jinwoo<b>Composure</b></div>
+        <div class="vs">vs</div>
+        <div class="b">Ant King<b>Aggression</b></div>
+      </div>
+      <div class="chrome" style="left:auto; width:744px"><span class="pg"><b>06</b> / 10</span><span
+          class="credit">Centerpiece · Sung Jinwoo</span></div>
+    </section>
+
+    <!-- ============ 07 SUPPORTING CAST — IRON ============ -->
+    <section class="s" data-screen-label="07 Supporting Cast">
+      <div class="art slideR sc-art"><img src="img/iron-art.jpg" alt="Iron, shadow soldier"></div>
+      <div class="grade sc-grade"></div>
+      <div class="embers" data-embers="blue" data-n="20"></div>
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div class="sc-body">
+        <div class="kicker rise">World-Building</div>
+        <h2 class="rise" style="--d:.15s; margin-top:26px">The World That<br><em>Gives Power Meaning</em></h2>
+        <div class="sc-tiers">
+          <div class="sc-tier rise" style="--d:.4s">
+            <div class="rk">S</div>
+            <div><b>Elite hunters</b>
+              <p>When S-Rank hunters struggle at Jeju, the audience knows the threat is real. Their limits measure
+                Jinwoo's growth.</p>
+            </div>
+          </div>
+          <div class="sc-tier red rise" style="--d:.55s">
+            <div class="rk">◆</div>
+            <div><b>The shadow army</b>
+              <p>Iron, Igris and Beru turn Jinwoo's power into something visible, and uniquely his.</p>
+            </div>
+          </div>
+          <div class="sc-tier gray rise" style="--d:.7s">
+            <div class="rk">E</div>
+            <div><b>Those who need saving</b>
+              <p>Endangered hunters and civilians supply the stakes that keep spectacle from feeling empty.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-cap fade" style="--d:1s">Shadow Soldier<b>Iron</b></div>
+      <div class="chrome" style="left:860px"><span class="pg"><b>07</b> / 10</span><span class="credit">Centerpiece ·
+          Iron</span></div>
+    </section>
+
+    <!-- ============ 08 REFLECTION — JINWOO ALONE ============ -->
+    <section class="s" data-screen-label="08 Reflection So What">
+      <div class="art kb rf-art"><img src="img/jinwoo-vs-ant.jpg" alt="Jinwoo standing alone after the battle"></div>
+      <div class="rf-red"></div>
+      <div class="grade rf-grade"></div>
+      <div class="embers" data-embers="mix" data-n="40"></div>
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div class="rf-body">
+        <div class="kicker red rise">Final Reflection</div>
+        <div class="rf-big rise" style="--d:.2s">So <span>What?</span></div>
+        <p class="lede rise" style="--d:.45s">I used to notice only the fights and the animation. Analyzing the genre
+          showed me those fights are <strong>designed to communicate meaning.</strong></p>
+        <div class="rf-points">
+          <div class="rise" style="--d:.7s"><i>01</i><span><strong>Fights carry meaning.</strong> Pacing, sound and the
+              rescue context guide us to see Jinwoo's growth and others' danger.</span></div>
+          <div class="rise" style="--d:.85s"><i>02</i><span><strong>Conventions are a shared language</strong> that lets
+              audiences understand a story quickly.</span></div>
+          <div class="rise" style="--d:1s"><i>03</i><span><strong>Constraints fuel creativity,</strong> pushing creators
+              to keep familiar ideas fresh.</span></div>
+        </div>
+      </div>
+
+      <div class="rf-out sys fade" style="--d:1.3s">
+        <span class="tag">Beyond anime</span>
+        <p>The same questions be it the purpose, the audience, the conventions, the advantages,and the limits apply to
+          every text I analyze in
+          ENG 1010.</p>
+        <div class="chips"><span>Films</span><span>Advertisements</span><span>Articles</span><span>Posters</span></div>
+      </div>
+      <div class="chrome" style="left:120px; right:auto; width:1020px"><span class="pg"><b>08</b> / 10</span><span
+          class="credit">Centerpiece · Sung Jinwoo</span></div>
+    </section>
+
+    <!-- ============ 09 ARTIFACT ============ -->
+    <section class="s" data-screen-label="09 Artifact Image">
+      <div class="art af-bg"><img src="img/ep24-official.jpg" alt=""></div>
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div class="af-frame fade" style="--d:.1s">
+        <div class="art kb" style="position:absolute; inset:0"><img src="img/ep24-official.jpg"
+            alt="Official Solo Leveling Episode 24 still"></div>
+        <span class="rec">EP. 24 · ARE YOU THE KING OF HUMANS</span>
+        <i class="corner c1 glowpulse"></i><i class="corner c2 glowpulse"></i><i class="corner c3 glowpulse"></i><i
+          class="corner c4 glowpulse"></i>
+      </div>
+
+      <div class="af-cap rise" style="--d:.6s">
+        <div class="fig">Figure 1<span>Required artifact</span></div>
+        <p>Official still from <em>Solo Leveling</em>, Episode 24, "Are You the King of Humans." The red glow, dark
+          surroundings and dramatic scale establish supernatural danger before the action begins.
+          <small>Source: A-1 Pictures, 2025. Official episode page — sololeveling-anime.net/story/?id=24</small>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 10 SOURCES — IGRIS ============ -->
+    <section class="s" data-screen-label="10 Sources">
+      <div class="art sr-art"><img src="img/igris-art.jpg" alt=""></div>
+      <div class="grade sr-grade"></div>
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div class="sr-body fade">
+        <div class="kicker">Sources &amp; Credits</div>
+        <h2 style="margin-top:26px">Works <em>Cited</em></h2>
+        <div class="sr-list">
+          <div><em>Solo Leveling</em>, season 2, episode 12 (series ep. 24), "Are You the King of Humans." A-1 Pictures,
+            2025. <span>https://sololeveling-anime.net/story/?id=24</span></div>
+          <div>Crunchyroll. "Sung Jinwoo vs. the Ant King." <em>YouTube</em>, 22 Mar. 2025.
+            <span>https://www.youtube.com/watch?v=IrHTT2IEKpE</span>
+          </div>
+          <div>Crunchyroll. "Jinwoo's First Solo Battle." <em>YouTube</em>.
+            <span>https://www.youtube.com/watch?v=WnrfPSVtNaY</span>
+          </div>
+          <div>Knox, Kelly. "Solo Leveling Episode 24 Recap." <em>Crunchyroll News</em>, 24 Mar. 2025.</div>
+        </div>
+        <p class="sr-note">Character imagery: official <em>Solo Leveling</em> anime stills and promotional art ©
+          Chugong, DUBU (REDICE STUDIO), A-1 Pictures / Crunchyroll. Used for educational commentary and analysis.</p>
+      </div>
+      <div class="chrome"><span class="pg"><b>10</b> / 10</span><span class="credit">ENG 1010 · Project Three</span>
+      </div>
+    </section>
+
+  </deck-stage>
+
+  <script>
+    // particle embers
+    const PAL = { red: ['#ff3344', '#ff6a3d', '#d11a2a'], blue: ['#5fd6ff', '#8fe6ff', '#3aa8ff'], mix: ['#ff3344', '#ff6a3d', '#5fd6ff'] };
+    document.querySelectorAll('.embers').forEach(el => {
+      const pal = PAL[el.dataset.embers] || PAL.red, n = +el.dataset.n || 24;
+      let html = '';
+      for (let i = 0; i < n; i++) {
+        const sz = (Math.random() * 3 + 1.5).toFixed(1);
+        html += `<i style="--x:${(Math.random() * 100).toFixed(1)}%;--sz:${sz}px;--c:${pal[i % pal.length]};--t:${(Math.random() * 9 + 8).toFixed(1)}s;--dl:-${(Math.random() * 14).toFixed(1)}s;--dx:${(Math.random() * 240 - 120).toFixed(0)}px;--o:${(Math.random() * .5 + .35).toFixed(2)}"></i>`;
+      }
+      el.innerHTML = html;
+    });
+  </script>
+</body>
+
+</html>
