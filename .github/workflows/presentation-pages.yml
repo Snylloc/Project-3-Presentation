@@ -1,0 +1,36 @@
+name: Publish presentation with embedded video
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Prepare presentation and verify reference video
+        run: |
+          mkdir -p _site/media
+          cp index.html deck.css deck_stage.js _site/
+          cp -r img _site/
+          url='https://github.com/Snylloc/Project-3-Presentation/releases/download/reference-video-v1/Solo_Leveling_Reference.mp4'
+          curl --fail --location --retry 3 "$url" -o _site/media/Solo_Leveling_Reference.mp4
+          echo 'c268ff3f5d90b0318448945038d84fa5512ce45f77b8cb330d6ae757dba11b90  _site/media/Solo_Leveling_Reference.mp4' | sha256sum --check
+          sed -i "s|$url|media/Solo_Leveling_Reference.mp4|g" _site/index.html
+          grep -q 'data-src="media/Solo_Leveling_Reference.mp4"' _site/index.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - uses: actions/deploy-pages@v4
+        id: deployment
